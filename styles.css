@@ -1,0 +1,467 @@
+:root {
+    --red: #BF021B;
+    --green: #224936;
+    --white: #CCD5DE;
+    --brown: #B0895D;
+}
+
+* {
+    font-family: 'Oswald', sans-serif;
+    margin: 0;
+    font-weight: normal;
+    color: white;
+    scroll-behavior: smooth
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+html {
+    scroll-padding-top: 100px;
+}
+
+body {
+    background: var(--green);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-flow: wrap;
+}
+
+#nav {
+    width: 100%;
+    font-size: 2rem;
+    box-sizing: border-box;
+    padding: 5px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 800px;
+    position: fixed;
+    z-index: 10;
+    transition: 0.5s;
+    height: 5rem;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: none;
+}
+
+@media (min-width: 1001px) {
+    #nav::before, #nav::after {
+        content: "";
+        position: fixed;
+        top: 0;
+        width: 100vw;
+        height: 100%;
+        background: inherit;
+        z-index: -1;
+    }
+    
+    #nav::before {
+        left: 0;
+    }
+    
+    #nav::after {
+        right: 0;
+    }
+}
+
+
+
+#nav * {
+    flex: 1;
+    text-align: center;
+    align-content: center;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+#nav a {
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-decoration: none;
+}
+
+#nav-title {
+    font-weight: 400 !important;
+    font-size: 3rem !important;
+}
+
+#splash {
+    position: relative;
+    width: 100%;
+    /* height: 100%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100%;
+}
+
+#splash-content {
+    /* position: absolute; */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 20px;
+    gap: 30px;
+    align-items: center;
+    padding: 80px 0;
+    z-index: 3;
+}
+
+#splash-background, #about-background, .find-background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover !important;
+    background-position: center center !important;
+    opacity: 0.2;
+    top: 0;
+    left: 0;
+}
+
+#splash-background {
+    background-image: url(download.jpg);
+}
+
+#about-background {
+    background-image: url(graphic.jpg);
+}
+
+h1 {
+    font-size: 8rem;
+    font-family: "Nanum Pen Script", cursive;
+    text-align: center;
+    line-height: 6rem;
+}
+
+/* i {
+    font-family: "Nanum Pen Script", cursive;
+    font-style: normal;
+    font-size: 3rem;
+} */
+
+
+button {
+    font-size: 2rem;
+    padding: 10px 40px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    transition: 0.5s;
+    background: #8f0013;
+}
+
+button:hover {
+    border-radius: 10px;
+    background: white;
+    color: var(--green);
+}
+
+h1 > span {
+    /* color: var(--red); */
+    text-shadow: 10px 10px 0 var(--red);
+    /* text-shadow: 10px 10px 0 white; */
+}
+
+#splash-content p {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+#menu {
+    width: 100%;
+    aspect-ratio: 1/0.70648;
+    background: var(--green);
+    padding: 25px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+#menu img {
+    width: 100%;
+}
+
+#menu-overlay {
+    display: none;
+}
+
+#menu-overlay > button, #find button:first-of-type {
+    background: var(--green);
+}
+
+
+#menu-overlay > button:hover, #find button:first-of-type:hover {
+    background: white;
+    color: var(--green);
+}
+
+#nav[data-bg-visible="true"] {
+    background: var(--green);
+}
+
+h3 {
+    font-size: 3rem;
+    text-align: center;
+    font-weight: 100;
+}
+
+h3::before {
+    content: "CORSARO | ";
+    font-weight: 400;
+}
+
+#menu h3 {
+    padding-bottom: 20px;
+}
+
+#about {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    /* min-height: 100%; */
+    padding: 20px;
+    box-sizing: border-box;
+    gap: 40px;
+    overflow: hidden;
+}
+
+#about > .about-container {
+    max-width: 400px;
+    font-size: 1.5rem;
+    position: relative;
+}
+
+#about > .about-container:first-of-type {
+    transform: translateX(-20%);
+}
+
+#about > .about-container:last-of-type {
+    transform: translateX(20%);
+    padding-bottom: 60px;
+}
+
+.about-image {
+    position: absolute;
+    background-position: center !important;
+    background-size: cover !important;
+    box-shadow: 10px 10px 0 var(--red);
+    max-width: 100%;
+}
+
+#about-image1 {
+    top: -20%;
+    left: -90%;
+    width: 300px;
+    height: 400px;
+    background: url(photo1.jpg);
+    z-index: 2;
+}
+
+#about-image2 {
+    top: 0%;
+    right: -130%;
+    width: 500px;
+    height: 300px;
+    background: url(photo2.jpg);
+}
+
+#about-image3 {
+    top: 0%;
+    left: -140%;
+    width: 500px;
+    height: 300px;
+    background: url(photo3.jpg);
+}
+
+#about-image4 {
+    top: -20%;
+    right: -90%;
+    width: 300px;
+    height: 400px;
+    background: url(photo4.jpg);
+}
+
+#mission {
+    font-size: 4rem;
+    font-family: "Nanum Pen Script", cursive;
+    text-align: center;
+    width: 100%;
+    background: var(--red);
+    padding: 20px 0;
+}
+
+#mission > span {
+    font-family: inherit;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+#community, #find {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 20px;
+    box-sizing: border-box;
+    gap: 40px;
+    overflow: hidden;  
+}
+
+.community-box {
+    width: 100%;
+    max-width: 1000px;
+    height: 300px;
+    background: var(--white);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.community-box > h4 {
+    font-size: 2rem;
+    text-align: center;
+    font-weight: 400;
+    width: 100%;
+    background: var(--red);
+}
+
+.community-box > h4::before {
+    content: "CORSARO x ";
+    font-weight: 100;
+}
+
+#find-columns {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+#find-columns > div {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+    align-items: center;
+    /* justify-content: center; */
+    flex-direction: column;
+    display: flex;
+    min-width: 300px;
+    position: relative;
+    box-shadow: 10px 10px 0 var(--red);
+    overflow: hidden;
+    gap: 10px;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.find-background {
+    z-index: -1;
+}
+
+#find-columns > div:first-of-type .find-background {
+    background: url(shop.jpg);
+}
+
+#find-columns > div:last-of-type .find-background {
+    background: url(online.jpg);
+}
+
+#find h5 {
+    font-size: 4rem;
+    font-family: "Nanum Pen Script", cursive;
+
+}
+
+#times {
+    font-weight: 100;
+}
+
+#times b {
+    font-weight: 400;
+}
+
+@media (max-width: 1000px) {
+    h1 {
+        font-size: 5rem;
+    }
+
+    #nav {
+        flex-direction: column;
+    }
+
+    #nav::after {
+        content: "☰";
+        position: absolute;
+        font-size: 2rem;
+        top: 1rem;
+        right: 1.5rem;
+        cursor: pointer;
+    }
+
+    #nav > a {
+        font-size: 0rem;
+    }
+
+    #nav[data-nav="true"] {
+        height: 100%;
+        background: var(--green);
+    }
+
+    #nav[data-nav="true"] > a {
+        font-size: 2.5rem;
+    }
+
+    #menu-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(34, 73, 54, 0.5);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .about-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    #about > .about-container:first-of-type {
+        transform: translateX(0);
+    }
+    
+    #about > .about-container:last-of-type {
+        transform: translateX(0);
+    }
+
+    .about-image {
+        position: relative;
+        top: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        bottom: 0 !important;
+        padding: 10px;
+    }
+}
