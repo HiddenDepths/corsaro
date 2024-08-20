@@ -241,11 +241,11 @@ h3::before {
     position: relative;
 }
 
-#about > .about-container:first-of-type {
+#about > .about-container:nth-of-type(odd) {
     transform: translateX(-20%);
 }
 
-#about > .about-container:last-of-type {
+#about > .about-container:nth-of-type(even) {
     transform: translateX(20%);
     padding-bottom: 60px;
 }
