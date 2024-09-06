@@ -250,6 +250,15 @@ h3::before {
     padding-bottom: 60px;
 }
 
+#about > .about-container:nth-of-type(5) {
+    padding-bottom: 0 !important;
+}
+
+#about > .about-container:nth-of-type(6) {
+    padding-bottom: 100px;
+    transform: translateX(0);
+}
+
 .about-image {
     position: absolute;
     background-position: center !important;
@@ -295,7 +304,7 @@ h3::before {
     left: -140%;
     width: 500px;
     height: 300px;
-    background: url(photo5.jpg);
+    background: url(photo6.jpg);
 }
 
 #about-image6 {
@@ -303,14 +312,14 @@ h3::before {
     right: -90%;
     width: 300px;
     height: 400px;
-    background: url(photo6.jpg);
+    background: url(photo7.jpg);
 }
 #about-image7 {
     top: 0%;
     left: -140%;
     width: 500px;
     height: 300px;
-    background: url(photo7.jpg);
+    background: url(photo1.jpg);
 }
 
 #about-image8 {
@@ -318,14 +327,14 @@ h3::before {
     right: -90%;
     width: 300px;
     height: 400px;
-    background: url(photo8.jpg);
+    background: url(photo4.jpg);
 }
 #about-image9 {
     top: 0%;
     left: -140%;
     width: 500px;
     height: 300px;
-    background: url(photo9.jpg);
+    background: url(photo5.jpg);
 }
 
 #about-image10 {
@@ -333,7 +342,7 @@ h3::before {
     right: -90%;
     width: 300px;
     height: 400px;
-    background: url(photo10.jpg);
+    background: url(photo3.jpg);
 }
 
 #mission {
