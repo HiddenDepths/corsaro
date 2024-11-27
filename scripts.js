@@ -13,3 +13,7 @@ window.addEventListener("scroll", function(evt) {
 document.querySelector("#menu-overlay > button").addEventListener("click", function() {
     window.open("Update menu winter _page-0001.jpg")
 })
+
+document.querySelector("#menu-overlay-2 > button").addEventListener("click", function() {
+    window.open("menu2.jpg")
+})
