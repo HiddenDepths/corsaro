@@ -175,7 +175,7 @@ h1 > span {
     text-align: center;
 }
 
-#menu {
+#menu, #menu-2 {
     width: 100%;
     aspect-ratio: 1/0.70648;
     background: var(--green);
@@ -184,20 +184,20 @@ h1 > span {
     position: relative;
 }
 
-#menu img {
+#menu img, #menu-2 img {
     width: 100%;
 }
 
-#menu-overlay {
+#menu-overlay, #menu-overlay-2 {
     display: none;
 }
 
-#menu-overlay > button, #find button:first-of-type {
+#menu-overlay > button, #menu-overlay-2 > button, #find button:first-of-type {
     background: var(--green);
 }
 
 
-#menu-overlay > button:hover, #find button:first-of-type:hover {
+#menu-overlay > button:hover, #menu-overlay-2 > button:hover, #find button:first-of-type:hover {
     background: white;
     color: var(--green);
 }
