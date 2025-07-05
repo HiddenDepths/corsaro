@@ -11,7 +11,7 @@ window.addEventListener("scroll", function(evt) {
 })
 
 document.querySelector("#menu-overlay > button").addEventListener("click", function() {
-    window.open("Update menu winter _page-0001.jpg")
+    window.open("corsaro menu summer 2025 MASTER.pdf")
 })
 
 document.querySelector("#menu-overlay-2 > button").addEventListener("click", function() {
